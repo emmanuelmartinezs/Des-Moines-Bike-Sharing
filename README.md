@@ -12,7 +12,7 @@ For this analysis, you’ll use Pandas to change the "tripduration" column from 
 1. ***Deliverable 1***: Change Trip Duration to a Datetime Format
 2. ***Deliverable 2***: Create Visualizations for the Trip Analysis
 3. ***Deliverable 3***: Create a Story and Report for the Final Presentation
-4. **Extra***: A written report on Des Moines - Bike Sharing Project Analysis [`README.md`](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/). 
+4. **Extra**: A written report on Des Moines - Bike Sharing Project Analysis [`README.md`](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/). 
  
 
 ## Resources and Before Start Notes:
