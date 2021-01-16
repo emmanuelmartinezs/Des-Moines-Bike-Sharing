@@ -60,28 +60,23 @@ Now that Tableau is installed, let's get started with downloading the data we'll
 > Let's move on!
 
 # Deliverable 1:  
-## Add Tectonic Plate Data
+## Change Trip Duration to a Datetime Format
 ### Deliverable Requirements:
-Using your knowledge of JavaScript, Leaflet.js, and geoJSON data, you’ll add tectonic plate data using `d3.json()`, add the data using the `geoJSON()` layer, set the tectonic plate `LineString` data to stand out on the map, and add the tectonic plate data to the overlay object with the earthquake data.
+Using Python and Pandas functions, you’ll convert the "tripduration" column from an integer to a datetime datatype to get the time in hours, minutes, and seconds (00:00:00). After you convert the "tripduration" column to a datetime dataytpe, you’ll export the DataFrame as a CSV file to use for the trip analysis in Deliverable 2.
 
-Your final map should look similar to the following image:
+Your final results should look similar to the following image:
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s4.png?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s5.png?raw=true)
 
 
 
-1. The tectonic plate data is added as a second layer group.
-2. The tectonic plate data is added to the overlay object.
-3. The `d3.json()` callback is working and does the following:
-  - The tectonic plate data is passed to the `geoJSON()` layer
-  - The `geoJSON()` layer adds color and width to the tectonic plate lines
-  - The tectonic layer group variable is added to the map
-4. The earthquake data and tectonic plate data displayed on the map when the page loads.
+1. The data in the "tripduration" column is converted to a datetime datatype and has the correct time format.
+2. The DataFrame is exported as a new file without the index column.
 
  
 ### Results with detail analysis:
 
-1. **The tectonic plate data is added as a second layer group.**
+1. **The data in the "tripduration" column is converted to a datetime datatype and has the correct time format.**
 
 
 > Image with `Jupyter Notebook` & `Tableau` Code below.
@@ -100,7 +95,7 @@ Your final map should look similar to the following image:
 
 
 
-2. **The tectonic plate data is added to the overlay object.**
+2. **The DataFrame is exported as a new file without the index column.**
 
 
 > Image with `Jupyter Notebook` & `Tableau` Code below.
@@ -120,327 +115,178 @@ Your final map should look similar to the following image:
 
 
 
-3. **The `d3.json()` callback is working and does the following:**
-  - The tectonic plate data is passed to the `geoJSON()` layer
-  - The `geoJSON()` layer adds color and width to the tectonic plate lines
-  - The tectonic layer group variable is added to the map
-
-
-> Image with `Jupyter Notebook` & `Tableau` Code below.
-
-**Code and Image**
-
-
-````js
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 14
-````
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.3.JPG?raw=true)
-
-
-
-4. **The earthquake data and tectonic plate data displayed on the map when the page loads.**
-
-
-> Image with `Jupyter Notebook` & `Tableau` Code below.
-
-**Code and Image**
-
-
-````js
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 14
-
-````
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.4.JPG?raw=true)
-
-
-
-
 # Deliverable 2:  
-## Add Major Earthquake Data
+## Create Visualizations for the Trip Analysis
 ### Deliverable Requirements:
-Using your knowledge of JavaScript, Leaflet.js, and geoJSON data, you’ll add major earthquake data to the map using `d3.json()`, and a color and set the radius of the circle based on the magnitude of earthquake, and add a popup marker for each earthquake that displays the magnitude and location of the earthquake using the GeoJSON layer, `geoJSON()`.
+Using Tableau, create visualizations that show:
 
-Your final map should look similar to the following image:
+  - How long bikes are checked out for all riders and genders.
+  - How many trips are taken by the hour for each day of the week, for all riders and genders.
+  - A breakdown of what days of the week a user might be more likely to check out a bike, by type of user and gender.
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s5.png?raw=true)
+### Create the Checkout Times for Users Viz
+In this visualization, you’ll graph the length of time that bikes are checked out for all riders.
+
+Your final results should look similar to the following image:
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s6.png?raw=true)
 
 
+### Create the Checkout Times by Gender Viz
+In this visualization, you’ll graph the length of time that bikes are checked out for each gender.
 
-1. The major earthquake data is added as a third layer group.
-2. The major earthquake data is added to the overlay object.
-3. The `d3.json()` callback is working and does the following:
-  - Sets the color and diameter of each earthquake.
-  - The major earthquake data is passed to the `geoJSON()` layer.
-  - The **geoJSON()** layer creates a circle for each major earthquake, and adds a popup for each circle to display the magnitude and location of the earthquake
-  - The major earthquake layer group variable is added to the map
-4. All the earthquake data and tectonic plate data are displayed on the map when the page loads and the datasets can be toggled on or off.
+Your final results should look similar to the following image:
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s7.png?raw=true)
+
+
+### Create the Trips by Weekday for Each Hour Viz
+In this visualization, you’ll graph the number of bike trips by weekday for each hour of the day as a heatmap.
+
+Your final results should look similar to the following image:
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s8.png?raw=true)
+
+
+### Create the Trips by Gender (Weekday per Hour) Viz
+In this visualization, you’ll graph the number of bike trips by gender for each hour of each day of the week as a heatmap.
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s9.png?raw=true)
+
+
+### Create the User Trips by Gender by Weekday Viz
+In this visualization, you’ll graph the number of bike trips by gender for each hour for each day of the week as a heatmap.
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s10.png?raw=true)
+
+
+### Deliverable 2 Requirements:
+You will earn a perfect score for Deliverable 2 by completing all requirements below:
+
+1. There is a line graph displaying the number of bikes checked out by duration for all users, and the graph can be filtered by the hour.
+2. There is a line graph displaying the number of bikes that are checked out by duration for each gender by the hour, and the graph can be filtered by the hour and gender.
+3. A heatmap is created showing the number of bike trips for each hour of each day of the week.
+4. A heatmap is created showing the number of bike trips by gender for each hour of each day of the week, and the heatmap can be filtered by gender.
+5. A heatmap is created showing the number of bike trips for each type of user and gender for each day of the week, and you can only filter by user and gender.
 
  
 ### Results with detail analysis:
 
-1. **The major earthquake data is added as a third layer group.**
+1. **There is a line graph displaying the number of bikes checked out by duration for all users, and the graph can be filtered by the hour.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
 
 ````js
-// DELIVERABLE 2
+// COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
-
-// 1. Add a 3rd layer group for the tectonic plate data.
-let allEarthquakes = new L.LayerGroup();
-let tectonicPlates = new L.LayerGroup();
-let majorEarthquakes = new L.LayerGroup();
+// Module 14
 
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/2.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.1.JPG?raw=true)
 
 
 
-2. **The major earthquake data is added to the overlay object.**
+2. **There is a line graph displaying the number of bikes that are checked out by duration for each gender by the hour, and the graph can be filtered by the hour and gender.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
 
 ````js
-// DELIVERABLE 2
+// COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
+// Module 14
 
-// 2. Add a reference to the tectonic plates group to the overlays object.
-let overlays = {
-  "Earthquakes": allEarthquakes,
-  "Tectonic Plates": tectonicPlates,
-  "Major Earthquakes": majorEarthquakes
-};
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/2.2.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.2.JPG?raw=true)
 
 
 
-3. **The `d3.json()` callback is working and does the following:**
-  - Sets the color and diameter of each earthquake.
-  - The major earthquake data is passed to the `geoJSON()` layer.
-  - The **geoJSON()** layer creates a circle for each major earthquake, and adds a popup for each circle to display the magnitude and location of the earthquake
-  - The major earthquake layer group variable is added to the map
+3. **A heatmap is created showing the number of bike trips for each hour of each day of the week.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
 
 ````js
-// DELIVERABLE 2
+// COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
+// Module 14
 
-
-// 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
-d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
-
-// 4. Use the same style as the earthquake data.
-function styleInfo(feature) {
-  return {
-    opacity: 1,
-    fillOpacity: 1,
-    fillColor: getColor(feature.properties.mag),
-    color: "#000000",
-    radius: getRadius(feature.properties.mag),
-    stroke: true,
-    weight: 0.5
-  };
-}
-  
-// 5. Change the color function to use three colors for the major earthquakes based on the magnitude of the earthquake.
-function getColor(magnitude) {
-  if (magnitude > 5) {
-    return "#ea2c2c";
-  }
-  if (magnitude > 4) {
-    return "#ea822c";
-  }
-  return "#eecc00";
-}
-  
-// 6. Use the function that determines the radius of the earthquake marker based on its magnitude.
-function getRadius(magnitude) {
-  if (magnitude === 0) {
-    return 1;
-  }
-  return magnitude * 4;
-}
-  
-// 7. Creating a GeoJSON layer with the retrieved data that adds a circle to the map 
-// sets the style of the circle, and displays the magnitude and location of the earthquake
-//  after the marker has been created and styled.
-L.geoJson(data, {
-    // We turn each feature into a circleMarker on the map.
-    pointToLayer: function(feature, latlng) {
-        console.log(data);
-        return L.circleMarker(latlng);
-      },
-    // We set the style for each circleMarker using our styleInfo function.
-  style: styleInfo,
-  // We create a popup for each circleMarker to display the magnitude and location of the earthquake
-  //  after the marker has been created and styled.
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
-  }
-}).addTo(majorEarthquakes);
-  
-// 8. Add the major earthquakes layer to the map.
-majorEarthquakes.addTo(map);
-
-// 9. Close the braces and parentheses for the major earthquake data.
-});
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/2.3.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.3.JPG?raw=true)
 
 
 
-4. **All the earthquake data and tectonic plate data are displayed on the map when the page loads and the datasets can be toggled on or off.**
+4. **A heatmap is created showing the number of bike trips by gender for each hour of each day of the week, and the heatmap can be filtered by gender.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
 
 ````js
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function(plateData) {
-      // Adding our geoJSON data, along with style information, to the tectonicplates
-      // layer.
-      L.geoJson(plateData, {
-        color: "#ff6500",
-        weight: 2
-      })
-      .addTo(tectonicPlates);
+// COLUMBIA ENGINEERING 
+// By Emmanuel Martinez
+// Module 14
 
-      // Then add the tectonicplates layer to the map.
-      tectonicPlates.addTo(map);
-    
-  });
-});
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/2.4.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.4.JPG?raw=true)
+
+
+
+
+5. **A heatmap is created showing the number of bike trips for each type of user and gender for each day of the week, and you can only filter by user and gender.**
+
+
+> Image with `Jupyter Notebook` & `Tableau` Code below.
+
+**Code and Image**
+
+
+````js
+// COLUMBIA ENGINEERING 
+// By Emmanuel Martinez
+// Module 14
+
+````
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.5.JPG?raw=true)
 
 
 
 
 # Deliverable 3:  
-## Add an Additional Map
+## Create a Story and Report for the Final Presentation
 ### Deliverable Requirements:
-Using your knowledge of JavaScript and Leaflet.js add a third map style to your earthquake map.
+For this part of the Challenge, you’ll create a story in Tableau and write a report that describes the key outcomes of the NYC Citibike analysis you did in the module and in Deliverable 2.
 
-Your final map should look similar to the following image:
+Follow the instructions below to complete Deliverable 2.
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s6.png?raw=true)
+In Tableau, create a new Story using visualizations that will support the key findings you want to show.
 
+1. You must use the five visualizations that you created in Deliverable 2.
+2. You must use at least two visualizations that you created in this module.
+3. In your README markdown file, include the following:
+  - **Overview of the analysis:** Explain the purpose of this analysis.
+  - **Results:** Using the visualizations you have in your Tableau Story, describe the results of each visualization underneath the image.
+  - **Summary:** Provide a high-level summary of the results and two additional visualizations that you would perform with the given dataset.
 
+ [`README.md`](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/). 
 
-1. A third map tile layer is created.
-2. The third map is added to the overlay object.
-3. All the earthquake data and tectonic plate data are displayed on the all maps of the webpage.
-
- 
-### Results with detail analysis:
-
-1. **A third map tile layer is created.**
-
-
-> Image with `JavaScript` & `HTML` Code below.
-
-**Code and Image**
-
-
-````js
-// DELIVERABLE 3
-// By Emmanuel Martinez
-// Module 13
-
-// We create a third tile layer that will be the background of our map.
-let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-	maxZoom: 18,
-	accessToken: API_KEY
-});
-
-
-````
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/3.1.JPG?raw=true)
-
-
-
-2. **The third map is added to the overlay object.**
-
-
-> Image with `JavaScript` & `HTML` Code below.
-
-**Code and Image**
-
-
-````js
-// DELIVERABLE 3
-// By Emmanuel Martinez
-// Module 13
-
-// Create a base layer that holds all three maps.
-let baseMaps = {
-  "Streets": streets,
-  "Satellite": satelliteStreets,
-  "Dark": dark
-};
-````
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/3.2.JPG?raw=true)
-
-
-
-3. **All the earthquake data and tectonic plate data are displayed on the all maps of the webpage.**
-
-
-> Image with `JavaScript` & `HTML` Code below.
-
-**Code and Image**
-
-
-````java
-    // 9. Create the layout for the bar chart. 
-    var barLayout = {
-     title: "Top 10 Bacteria Cultures Found"
-    };
-    // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout);
-````
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/3.3.JPG?raw=true)
-
-
-
-# Deliverable 4:  
-A written report on the Mapping Earthquakes analysis [`README.md`](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/). 
-
-
-1. **A README.md that describes the purpose of the repository. Although there is no graded written analysis for this challenge, it is encouraged and good practice to add a brief description of your project.**
 
 
 ##### Des Moines - Bike Sharing Project Analysis Completed by Emmanuel Martinez
