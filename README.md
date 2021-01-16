@@ -17,64 +17,45 @@ For this analysis, you’ll use Pandas to change the "tripduration" column from 
 
 ## Resources and Before Start Notes:
 
-* Data Source: `tectonic_plate_starter_logic.js`, `tectonic_plate_starter_logic.js`, `tectonic_plate_starter_logic.js` and `index.html`
-* Data Tools: JavaScript, JSON, GeoJSON and IO (Web Server)
-* Software: ES6+, ECMAScript and Visual Studio Code 1.50.0
+* Data Source: `NYC_CitiBike_Challenge_starter_code.ipynb`, `NYC_Citibike_Challenge.ipynb` and `201908-citibike-tripdata.csv`
+* Data Tools: Jupyter Notebook, CSV, Tableau and IO (Web Server)
+* Software: Jupyter Notebook and Visual Studio Code 1.50.0
 
-For more information, visit [`The Mapbox API`](https://www.mapbox.com/pricing/?utm_medium=blog&utm_source=mapbox-blog&utm_campaign=blog%7Cmapbox-blog%7Cpricing%7Cnew-pricing-46b7c26166e7-19-05&utm_term=pricing&utm_content=new-pricing-46b7c26166e7/). 
-
-
-## Tech-Overview
-In this module, you will use the Leaflet.js Application Programming Interface (API) to populate a geographical map with GeoJSON earthquake data from a URL. Each earthquake will be visually represented by a circle and color, where a higher magnitude will have a larger diameter and will be darker in color. In addition, each earthquake will have a popup marker that, when clicked, will show the magnitude of the earthquake and the location of the earthquake.
-
-## Basic Project Plan
-
-**Purpose**
-The purpose of this project is to visually show the differences between the magnitudes of earthquakes all over the world for the last seven days.
-
-**Tasks**
-To complete this project, use a URL for GeoJSON earthquake data from the USGS website and retrieve geographical coordinates and the magnitudes of earthquakes for the last seven days. Then add the data to a map.
-
-**Approach**
-Your approach will be to use the JavaScript and the D3.js library to retrieve the coordinates and magnitudes of the earthquakes from the GeoJSON data. You'll use the Leaflet library to plot the data on a Mapbox map through an API request and create interactivity for the earthquake data.
-
-Now that you have an overview of the project plan, let's set up a Mapbox account and get the API token you'll need to create geographical maps.
-
-# The Leaflet JavaScript Library
-On the [`Leaflet`](https://leafletjs.com/index.html) homepage, scroll midpage and click the [`Leaflet Quick Start Guide`](https://leafletjs.com/examples/quick-start/) link:
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s1.png?raw=true)
-
-The Leaflet Quick Start Guide provides steps for setting up a Leaflet map. To begin, scroll midpage to the "Preparing your page" section:
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s2.png?raw=true)
-
-The "Preparing your page" section includes links and HTML code that we'll add to our [`Mapping Earthquakes - index.html`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/) page. 
+For more information, visit [`Tableau website`](https://public.tableau.com/en-us/s/). 
 
 
-## Use the Leaflet Documentation
-The [`Leaflet Quick Start Guide`](https://leafletjs.com/examples/quick-start/) provides the `tileLayer()` code:
+## Download Tableau Public
+First, go to the [`Tableau website`](https://public.tableau.com/en-us/s/) and enter your email. You will also be required to enter some contact information, but you can always unsubscribe from communications.
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s3.png?raw=true)
+## Install Tableau Public
+Once you have downloaded Tableau Public, we can start the process of installing Tableau Public. The process of installing Tableau Public is very similar to installing most other programs.
+
+After it's finished downloading, click to open the file and then follow the on-screen instructions. This is the first screen you will see as part of the installation. Go ahead and click "Continue."
 
 
-We can copy this tile layer code and assign it to the streets variable, since the tile layer will create a street-level map. Add the following code block to your `logic.js` file:
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s1.png?raw=true)
 
-````js
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 13
+Once you click "Continue," you should see the following screen. Click "Install."
 
-// We create the tile layer that will be the background of our map.
-let streets = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: API_KEY
-});
-// Then we add our 'graymap' tile layer to the map.
-streets.addTo(map);
-````
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s2.png?raw=true)
+
+
+This process may take a few minutes. This is what your window should look like:
+
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s3.png?raw=true)
+
+
+When the installation is complete, you will see this window confirming that the software was installed successfully:
+
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s4.png?raw=true)
+
+
+Now that Tableau is installed, let's get started with downloading the data we'll need.
+
+
 
 > Let's move on!
 
@@ -85,7 +66,7 @@ Using your knowledge of JavaScript, Leaflet.js, and geoJSON data, you’ll add t
 
 Your final map should look similar to the following image:
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s4.png?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/s4.png?raw=true)
 
 
 
@@ -103,7 +84,7 @@ Your final map should look similar to the following image:
 1. **The tectonic plate data is added as a second layer group.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
@@ -111,22 +92,18 @@ Your final map should look similar to the following image:
 ````js
 // COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
-
-// 1. Add a 2nd layer group for the tectonic plate data.
-let allEarthquakes = new L.LayerGroup();
-let tectonicPlates = new L.LayerGroup();
+// Module 14
 
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.1.JPG?raw=true)
 
 
 
 2. **The tectonic plate data is added to the overlay object.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
@@ -134,60 +111,11 @@ let tectonicPlates = new L.LayerGroup();
 ````js
 // COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
-
-// 2. Add a reference to the tectonic plates group to the overlays object.
-let overlays = {
-  "Earthquakes": allEarthquakes,
-  "Tectonic Plates": tectonicPlates,
-
-};
-
-// Then we add a control to the map that will allow the user to change which
-// layers are visible.
-L.control.layers(baseMaps, overlays).addTo(map);
-
-// Retrieve the earthquake GeoJSON data.
-d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
-
-  // This function returns the style data for each of the earthquakes we plot on
-  // the map. We pass the magnitude of the earthquake into two separate functions
-  // to calculate the color and radius.
-  function styleInfo(feature) {
-    return {
-      opacity: 1,
-      fillOpacity: 1,
-      fillColor: getColor(feature.properties.mag),
-      color: "#000000",
-      radius: getRadius(feature.properties.mag),
-      stroke: true,
-      weight: 0.5
-    };
-  }
-
-  // This function determines the color of the marker based on the magnitude of the earthquake.
-  function getColor(magnitude) {
-    if (magnitude > 5) {
-      return "#ea2c2c";
-    }
-    if (magnitude > 4) {
-      return "#ea822c";
-    }
-    if (magnitude > 3) {
-      return "#ee9c00";
-    }
-    if (magnitude > 2) {
-      return "#eecc00";
-    }
-    if (magnitude > 1) {
-      return "#d4ee00";
-    }
-    return "#98ee00";
-  }
+// Module 14
 
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/1.2.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.2.JPG?raw=true)
 
 
 
@@ -198,7 +126,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   - The tectonic layer group variable is added to the map
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
@@ -206,27 +134,17 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 ````js
 // COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
-
-  // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function(plateData) {
-      // Adding our geoJSON data, along with style information, to the tectonicplates
-      // layer.
-      L.geoJson(plateData, {
-        color: "#ff6500",
-        weight: 2
-      })
-      .addTo(tectonicPlates);
+// Module 14
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/1.3.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.3.JPG?raw=true)
 
 
 
 4. **The earthquake data and tectonic plate data displayed on the map when the page loads.**
 
 
-> Image with `JavaScript` & `HTML` Code below.
+> Image with `Jupyter Notebook` & `Tableau` Code below.
 
 **Code and Image**
 
@@ -234,14 +152,11 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 ````js
 // COLUMBIA ENGINEERING 
 // By Emmanuel Martinez
-// Module 13
-
-      // Then add the tectonicplates layer to the map.
-      tectonicPlates.addTo(map);
+// Module 14
 
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/1.4.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.4.JPG?raw=true)
 
 
 
