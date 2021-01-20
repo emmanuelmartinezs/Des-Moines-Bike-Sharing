@@ -291,6 +291,8 @@ You will earn a perfect score for Deliverable 2 by completing all requirements b
 
 ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.5.JPG?raw=true)
 
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.5.1.JPG?raw=true)
+
 
 
 
