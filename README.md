@@ -84,14 +84,32 @@ Your final results should look similar to the following image:
 **Code and Image**
 
 
-````js
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 14
+````py
+# CHALLENGE 14
+### MODULE 14 - Des Moines - Bike Sharing Project
+#### By Emmanuel Martinez
 
+import pandas as pd
+
+# 1. Create a DataFrame for the 201908-citibike-tripdata data. 
+citibike_data = "201908-citibike-tripdata.csv"
+citibike_df = pd.read_csv(citibike_data)
+
+# 2. Check the datatypes of your columns. 
+citibike_df.info()
+
+# 3. Convert the 'tripduration' column to datetime datatype.
+citibike_df['tripdur_orig'] = citibike_df['tripduration']
+citibike_df['tripduration'] = pd.to_datetime(citibike_df['tripduration'], unit='m')
+citibike_df.head()
+
+# 4. Check the datatypes of your columns. 
+citibike_df.info()
 ````
 
 ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.1.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.1.2.JPG?raw=true)
 
 
 
@@ -103,14 +121,17 @@ Your final results should look similar to the following image:
 **Code and Image**
 
 
-````js
-// COLUMBIA ENGINEERING 
-// By Emmanuel Martinez
-// Module 14
+````py
+# 5. Export the Dataframe as a new CSV file without the index.
+citibike_df.to_csv('citibike_201908_updt.csv', index=False)
 
+# by Emmanuel Martinez
+# Challenge 14
 ````
 
 ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.2.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/1.2.2.JPG?raw=true)
 
 
 
@@ -227,6 +248,8 @@ You will earn a perfect score for Deliverable 2 by completing all requirements b
 
 ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.3.JPG?raw=true)
 
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.3.1.JPG?raw=true)
+
 
 
 4. **A heatmap is created showing the number of bike trips by gender for each hour of each day of the week, and the heatmap can be filtered by gender.**
@@ -245,6 +268,8 @@ You will earn a perfect score for Deliverable 2 by completing all requirements b
 ````
 
 ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.4.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/2.4.1.JPG?raw=true)
 
 
 
