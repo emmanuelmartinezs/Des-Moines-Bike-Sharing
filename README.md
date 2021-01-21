@@ -306,11 +306,62 @@ Follow the instructions below to complete Deliverable 2.
 In Tableau, create a new Story using visualizations that will support the key findings you want to show.
 
 1. You must use the five visualizations that you created in Deliverable 2.
+
+> TABLEAU DASHBOARDS:
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.1.1.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.1.2.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.1.3.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.1.4.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.1.5.JPG?raw=true)
+
+
+>TABLEAU PUBLIC URL:
+
+ [`Final Data Analysis - Aug 2019`](https://public.tableau.com/views/Des-Moines-Bike-Sharing/FINALSTORYREPORT?:language=en&:display_count=y&publish=yes&:origin=viz_share_link). 
+
 2. You must use at least two visualizations that you created in this module.
+
+> TABLEAU WORKSHEET:
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.2.1.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.2.2.JPG?raw=true)
+
+![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.2.3.JPG?raw=true)
+
+
+
 3. In your README markdown file, include the following:
-  - **Overview of the analysis:** Explain the purpose of this analysis.
-  - **Results:** Using the visualizations you have in your Tableau Story, describe the results of each visualization underneath the image.
-  - **Summary:** Provide a high-level summary of the results and two additional visualizations that you would perform with the given dataset.
+  **Overview of the analysis:**, **Results:** & **Summary:** 
+  
+  - CitiBike Analysis tells that more than 80% are Subscribers, with an ~19% or regular non-subscribers, that data creates a new need, such better user experiance interaction in the future.
+
+  ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.3.1.JPG?raw=true)
+
+
+  - Total of 65% General Male use, 25% General Female with an Unknown gender that relies on non-subscribers users. In addition, Peak by Gener spike on same time frame, and Top 10 Start and Ending locations are on same zone (that's really good!)
+
+  ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.3.2.JPG?raw=true)
+
+  ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.3.3.JPG?raw=true)
+
+
+  - Inventory Use and Maintenance may be an issue in the future, locations are different time to time.
+
+    ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.3.4.JPG?raw=true)
+
+    ![name-of-you-image](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/blob/main/Resources/Images/3.3.5.JPG?raw=true)
+
+>TABLEAU PUBLIC URL:
+
+ [`Final Data Analysis - Aug 2019`](https://public.tableau.com/views/Des-Moines-Bike-Sharing/FINALSTORYREPORT?:language=en&:display_count=y&publish=yes&:origin=viz_share_link). 
+
+>DES MOINES BIKE SHARING PROJECT - Readme:
 
  [`README.md`](https://github.com/emmanuelmartinezs/Des-Moines-Bike-Sharing/). 
 
